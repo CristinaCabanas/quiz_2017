@@ -37,4 +37,8 @@ router.get('/ayuda', function(req, res, next) {
 });
 
 
+router.get('/quizzes.ramdomplay',	quizController.ramdom_play);
+router.get('/quizzes.ramdomcheck/:quizId(\\d+)',	quizController.ramdomcheck);
+
+
 module.exports = router;
