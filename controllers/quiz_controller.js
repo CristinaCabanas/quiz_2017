@@ -217,11 +217,13 @@ if(req.session.partidaTerminada){
 
 models.Quiz.count().then(function(count){
 
-	var numPregunta = Math.floor((Math.random()*count)) + 1;
+	var random = Math.floor((Math.random()*count));
+	var numPregunta= random +1;
 	// bucle while que haga: mientras que numPregunta esté en preguntasContestadas, calcularnumPregunta 
 while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 
-	var numPregunta = Math.floor((Math.random()*count)) + 1;
+	var random = Math.floor((Math.random()*count));
+	var numPregunta= random +1;
 }
 // cuando ya sabes numPregunta, añadirlo al array de preguntasContestadas
 	req.session.preguntasContestadas.push(numPregunta);
