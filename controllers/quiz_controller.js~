@@ -208,7 +208,7 @@ if(!req.session.preguntasContestadas){
  req.session.preguntasContestadas = [];
 } 
 
-models.Quiz.numPreguntas().then(function(numPreguntas){
+var numpreguntas = models.Quiz.count().then(function(count){
 
 	var numPregunta = Math.floor((Math.random()*numPreguntas)+1);
 	// bucle while que haga: mientras que numPregunta esté en preguntasContestadas, calcularnumPregunta 
@@ -220,7 +220,7 @@ while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 	req.session.preguntasContestadas.push(numPregunta);
 	console.log("Este es el número" + numPregunta);
 // obtener el Quiz de la base de datos que tiene el ID numPregunta
-	models.Quiz.findById(numPregunta).then(fuction(quiz){
+	models.Quiz.findById(numPregunta).then(function(quiz){
 // enviar la vista randomplay(quiz, score)
 		if(quiz){
 			res.render('quizzes/random_play',{
@@ -233,7 +233,7 @@ while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 		});
 
 	});
-};
+}
 
 exports.randomcheck = function (req, res, next) {
 
