@@ -37,8 +37,8 @@ router.get('/ayuda', function(req, res, next) {
 });
 
 
-router.get('/quizzes/randomplay',	quizController.ramdom_play);
-router.get('/quizzes/randomcheck/:quizId(\\d+)',	quizController.ramdomcheck);
+router.get('/quizzes/randomplay',	quizController.random_play);
+router.get('/quizzes/randomcheck/:quizId(\\d+)',	quizController.randomcheck);
 
 
 module.exports = router;
