@@ -36,5 +36,5 @@ router.get('/ayuda', function(req, res, next) {
     res.render('ayuda');
 });
 
-practica51
+
 module.exports = router;

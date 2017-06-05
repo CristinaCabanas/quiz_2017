@@ -208,6 +208,12 @@ if(!req.session.preguntasContestadas){
  req.session.preguntasContestadas = [];
 } 
 
+if(req.session.partidaTerminada){
+	req.session.partidaTerminada = false;
+	req.session.score = 0;
+	req.session.preguntasContestadas=[];
+}
+
 models.Quiz.count().then(function(count){
 
 	var numPregunta = Math.floor((Math.random()*count)+1);
