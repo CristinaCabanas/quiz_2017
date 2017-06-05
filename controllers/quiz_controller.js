@@ -188,7 +188,7 @@ exports.check = function (req, res, next) {
     });
 };
 
-
+//RAMDOMPLAY
 exports.randomplay = function(req, res, next){
 
 // intentar leer score de la sesión y si no existe, lo creo poniéndolo a cero
@@ -214,13 +214,14 @@ if(req.session.partidaTerminada){
 	req.session.preguntasContestadas=[];
 }
 
+
 models.Quiz.count().then(function(count){
 
-	var numPregunta = Math.floor((Math.random()*count)+1);
+	var numPregunta = Math.floor((Math.random()*count)) + 1;
 	// bucle while que haga: mientras que numPregunta esté en preguntasContestadas, calcularnumPregunta 
 while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 
-	var numPregunta = Math.floor((Math.random()*count)+1);
+	var numPregunta = Math.floor((Math.random()*count)) + 1;
 }
 // cuando ya sabes numPregunta, añadirlo al array de preguntasContestadas
 	req.session.preguntasContestadas.push(numPregunta);
@@ -241,6 +242,8 @@ while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 	});
 }
 
+
+//RANDOM CHECK
 exports.randomcheck = function (req, res, next) {
 
     models.Quiz.count().then(function(count){

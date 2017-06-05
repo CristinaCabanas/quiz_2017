@@ -188,7 +188,7 @@ exports.check = function (req, res, next) {
     });
 };
 
-
+//RAMDOMPLAY
 exports.randomplay = function(req, res, next){
 
 // intentar leer score de la sesión y si no existe, lo creo poniéndolo a cero
@@ -241,6 +241,8 @@ while(req.session.preguntasContestadas.indexOf(numPregunta)!=-1){
 	});
 }
 
+
+//RANDOM CHECK
 exports.randomcheck = function (req, res, next) {
 
     models.Quiz.count().then(function(count){
