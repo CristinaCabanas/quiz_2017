@@ -29,16 +29,13 @@ router.delete('/quizzes/:quizId(\\d+)',    quizController.destroy);
 
 router.get('/quizzes/:quizId(\\d+)/play',  quizController.play);
 router.get('/quizzes/:quizId(\\d+)/check', quizController.check);
-router.get('/quizzes/randomplay', quizController.randomplay);
+router.get('/quizzes/randomplay', quizController.random_play);
 router.get('/quizzes/randomcheck/:quizId(\\d+)', quizController.randomcheck);
 
 router.get('/ayuda', function(req, res, next) {
     res.render('ayuda');
 });
 
-
-router.get('/quizzes/randomplay',	quizController.random_play);
-router.get('/quizzes/randomcheck/:quizId(\\d+)',	quizController.randomcheck);
 
 
 module.exports = router;
