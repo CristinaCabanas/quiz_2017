@@ -280,7 +280,7 @@ exports.randomcheck = function (req, res, next) {
 
 		req.session.partidaTerminada = true;
 
-	    	res.render('quizzes/random_nomore', {  // Página que indica que no hay más preguntas 
+	    	res.render('quizzes/random_none', {  // Página que indica que no hay más preguntas 
 			score: req.session.score       // (se han contestado a todas las preguntas
                                                        // correctamente)
 	    	});	
