@@ -39,13 +39,17 @@
             <a href="/users/<%= session.user.id %>/quizzes">Mis Preguntas</a>
         <% } %>
         <a href="/author">Créditos</a>
+
 <<<<<<< HEAD
         <% if (session.user) { %>
            <a href="/users">Usuarios</a>
         <% } %>
 =======
+ 	<a href="/quizzes/randomplay">Jugar</a>
+>>>>>>> practica52
+
 	<a href="/ayuda">Ayuda</a>
->>>>>>> practica51
+
     </nav>
 
     <section class="main" id="mainSection">
