@@ -137,5 +137,7 @@ router.get('/ayuda', function(req, res, next) {
     res.render('ayuda');
 });
 
+router.get('/quizzes/randomplay', quizController.random_play);
+router.get('/quizzes/randomcheck/:quizId(\\d+)', quizController.randomcheck);
 
 module.exports = router;
