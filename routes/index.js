@@ -140,7 +140,6 @@ var express = require('express');
 	 tipController.accept);
 	router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
 	 sessionController.loginRequired,
-	 tipController.adminOrAuthorRequired,
 	 tipController.adminOrAuthorTipRequired,
 	 tipController.destroy);
 	
