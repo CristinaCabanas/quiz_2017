@@ -141,6 +141,7 @@ var express = require('express');
 	router.delete('/quizzes/:quizId(\\d+)/tips/:tipId(\\d+)',
 	 sessionController.loginRequired,
 	 tipController.adminOrAuthorRequired,
+	 tipController.adminOrAuthorTipRequired,
 	 tipController.destroy);
 	
 	
