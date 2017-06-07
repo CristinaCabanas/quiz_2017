@@ -147,7 +147,7 @@ var express = require('express');
 	// AÑADIDO ENTREGA 5.2
 	
 	// RANDOMPLAY: Página a mostrar la pregunta a contestar
-	router.get('/quizzes/randomplay', quizController.random_play);
+	router.get('/quizzes/randomplay', quizController.randomplay);
 	
 	// RANDOMCHECK
 	router.get('/quizzes/randomcheck/:quizId(\\d+)', quizController.randomcheck);
